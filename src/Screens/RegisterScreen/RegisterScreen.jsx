@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React, { useEffect } from "react";
 import useForm from "../../hook/useForm";
 import { register } from "../../services/authService";
 import useFetch from "../../hook/useFetch";
@@ -7,6 +7,7 @@ import "./RegisterScreen.css";
 
 const RegisterScreen = () => {
     const navigate = useNavigate();
+
     const REGISTER_FORM_FIELDS = {
         USERNAME: "username",
         EMAIL: "email",
@@ -38,6 +39,30 @@ const RegisterScreen = () => {
 
     return (
         <div className="register-screen">
+            <div
+                className={`notification-container ${error ? "show" : ""} ${
+                    response ? "show success" : ""
+                }`}
+            >
+                <div className="notification-content">
+                    {error && (
+                        <div className="notification error">
+                            <span className="notification-message">
+                                {error}
+                            </span>
+                        </div>
+                    )}
+                    {response && (
+                        <div className="notification success">
+                            <span className="notification-message">
+                                User registered successfully! Verify your email
+                                to activate your account.
+                            </span>
+                        </div>
+                    )}
+                </div>
+            </div>
+
             <div className="register-form-container">
                 <h2 className="register-title">Create Account</h2>
                 <form onSubmit={handleSubmit} className="register-form">
@@ -86,20 +111,11 @@ const RegisterScreen = () => {
                             placeholder="Password"
                         />
                     </div>
-                    <div className="message-container">
-                        {error && (
-                            <span className="error-message"> {error} </span>
-                        )}
-                        {response && (
-                            <span className="succes-message">
-                                User registered successfully!
-                            </span>
-                        )}
-                    </div>
+
                     <div className="button-container">
                         {loading ? (
                             <button disabled className="login-button">
-                                Registering
+                                Registering...
                             </button>
                         ) : (
                             <button className="login-button">Register</button>

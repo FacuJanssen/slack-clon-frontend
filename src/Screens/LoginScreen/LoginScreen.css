@@ -5,6 +5,95 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    position: relative;
+}
+
+.notification-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-out;
+}
+
+.notification-container.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.notification-content {
+    margin-top: 20px;
+}
+
+.notification {
+    padding: 15px 25px;
+    border-radius: 8px;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    border-top: 3px solid;
+    animation: slideInDown 0.5s ease-out forwards;
+    position: relative;
+}
+
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.8);
+    }
+    70% {
+        transform: translateY(10px) scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.notification.error {
+    background-color: var(--bg-light);
+    color: var(--danger);
+    border-color: var(--danger);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(244, 67, 54, 0.1),
+        transparent
+    );
+}
+
+.notification.success {
+    background-color: var(--bg-light);
+    color: var(--success);
+    border-color: var(--success);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(76, 175, 80, 0.1),
+        transparent
+    );
+}
+
+.notification-message {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+@keyframes subtlePulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
 }
 
 .login-title {
@@ -65,21 +154,6 @@
     display: none;
 }
 
-.message-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.error-message {
-    color: var(--danger);
-}
-
-.success-message {
-    color: var(--success);
-}
-
 .button-container {
     display: flex;
     flex-direction: column;
@@ -102,6 +176,11 @@
     background-color: var(--highlight);
 }
 
+.login-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 .login-footer {
     display: flex;
     flex-direction: row;
@@ -113,6 +192,7 @@
 .login-footer-text {
     color: var(--text);
 }
+
 .login-footer-link {
     text-decoration: none;
     color: var(--info);
