@@ -1,0 +1,143 @@
+.register-screen {
+    background-color: var(--bg-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.register-title {
+    color: var(--text);
+}
+
+.register-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    width: 300px;
+    border-radius: 10px;
+    background: var(--gradient);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--highlight);
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+.username-input {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    color: var(--text-muted);
+    background-color: var(--bg);
+    cursor: pointer;
+    border: 1px solid var(--border-muted);
+    box-shadow: 0px 0px 6px 3px var(--bg-dark) inset;
+}
+
+.username-label {
+    display: none;
+}
+
+.email-input {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    color: var(--text-muted);
+    background-color: var(--bg);
+    cursor: pointer;
+    border: 1px solid var(--border-muted);
+    box-shadow: 0px 0px 6px 3px var(--bg-dark) inset;
+}
+
+.email-label {
+    display: none;
+}
+
+.password-input {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    color: var(--text-muted);
+    background-color: var(--bg);
+    cursor: pointer;
+    border: 1px solid var(--border-muted);
+    box-shadow: 0px 0px 6px 3px var(--bg-dark) inset;
+}
+
+.password-label {
+    display: none;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.error-message {
+    color: var(--danger);
+}
+
+.succes-message {
+    color: var(--success);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-button {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    color: var(--bg-dark);
+    background-color: var(--primary);
+    cursor: pointer;
+    border: 1px solid var(--border);
+}
+
+.register-button:hover {
+    background-color: var(--highlight);
+}
+
+.register-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.register-footer-text {
+    color: var(--text);
+}
+.register-footer-link {
+    text-decoration: none;
+    color: var(--info);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.register-footer-link:hover {
+    text-decoration: underline;
+    color: var(--highlight);
+}

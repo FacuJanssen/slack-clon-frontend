@@ -1,0 +1,126 @@
+.login-screen {
+    background-color: var(--bg-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-title {
+    color: var(--text);
+}
+
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    width: 300px;
+    border-radius: 10px;
+    background: var(--gradient);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--highlight);
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+.email-input {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    color: var(--text-muted);
+    background-color: var(--bg);
+    cursor: pointer;
+    border: 1px solid var(--border-muted);
+    box-shadow: 0px 0px 6px 3px var(--bg-dark) inset;
+}
+
+.email-label {
+    display: none;
+}
+
+.password-input {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    color: var(--text-muted);
+    background-color: var(--bg);
+    cursor: pointer;
+    border: 1px solid var(--border-muted);
+    box-shadow: 0px 0px 6px 3px var(--bg-dark) inset;
+}
+
+.password-label {
+    display: none;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-message {
+    color: var(--danger);
+}
+
+.success-message {
+    color: var(--success);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-button {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    color: var(--bg-dark);
+    background-color: var(--primary);
+    cursor: pointer;
+    border: 1px solid var(--border);
+}
+
+.login-button:hover {
+    background-color: var(--highlight);
+}
+
+.login-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-footer-text {
+    color: var(--text);
+}
+.login-footer-link {
+    text-decoration: none;
+    color: var(--info);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-footer-link:hover {
+    text-decoration: underline;
+    color: var(--highlight);
+}
