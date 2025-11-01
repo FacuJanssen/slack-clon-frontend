@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import useFetch from "../../hook/useFetch";
 import { getWorkspaces } from "../../services/workspaceService";
 import { Link } from "react-router";
+import "./HomeScreen.css";
 
 const HomeScreen = () => {
     const { response, loading, error, sendRequest } = useFetch();
@@ -11,24 +12,30 @@ const HomeScreen = () => {
     console.log(response, loading, error);
 
     return (
-        <div>
-            <h1>Workspaces</h1>
+        <div className="HomeScreen">
+            <h1 className="home-title">Workspaces</h1>
             {loading ? (
-                <span>Loading...</span>
+                <span className="loading">Loading workspaces...</span>
             ) : (
-                <div>
+                <div className="workspaces-container">
                     {response &&
                         response.data.workspaces.map((workspace) => {
                             return (
-                                <div>
-                                    <h2>{workspace.workspace_name}</h2>
+                                <div
+                                    key={workspace.workspace_id}
+                                    className="workspace"
+                                >
+                                    <h2 className="workspace-name">
+                                        {workspace.workspace_name}
+                                    </h2>
                                     <Link
                                         to={
                                             "/workspace/" +
                                             workspace.workspace_id
                                         }
+                                        className="workspace-link"
                                     >
-                                        Open Workspaces
+                                        Open Workspace
                                     </Link>
                                 </div>
                             );

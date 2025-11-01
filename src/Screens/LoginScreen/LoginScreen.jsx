@@ -131,7 +131,7 @@ const LoginScreen = () => {
                     <div className="button-container">
                         {loading ? (
                             <button disabled className="login-button">
-                                Logging In
+                                Logging In...
                             </button>
                         ) : (
                             <button className="login-button">Login</button>

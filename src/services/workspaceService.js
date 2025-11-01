@@ -1,10 +1,10 @@
 import ENVIRONMENT from "../config/environment";
 
 export async function getWorkspaces() {
-    const response_http = await fetch(ENVIRONMENT.URL_API + "/api/workspace", {
+    const response_http = await fetch(ENVIRONMENT.URL_API + "/api/workspaces", {
         method: "GET",
         headers: {
-            "Content-Type": `Bearer ${localStorage.getItem("token")}`,
+            authorization: `Bearer ${localStorage.getItem("token")}`,
         },
     });
     if (!response_http.ok) {
