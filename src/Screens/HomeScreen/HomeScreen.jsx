@@ -21,18 +21,12 @@ const HomeScreen = () => {
                     {response &&
                         response.data.workspaces.map((workspace) => {
                             return (
-                                <div
-                                    key={workspace.workspace_id}
-                                    className="workspace"
-                                >
+                                <div key={workspace.id} className="workspace">
                                     <h2 className="workspace-name">
-                                        {workspace.workspace_name}
+                                        {workspace.name}
                                     </h2>
                                     <Link
-                                        to={
-                                            "/workspace/" +
-                                            workspace.workspace_id
-                                        }
+                                        to={"/workspace/" + workspace._id}
                                         className="workspace-link"
                                     >
                                         Open Workspace

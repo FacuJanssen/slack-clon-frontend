@@ -7,9 +7,9 @@ export async function getWorkspaces() {
             authorization: `Bearer ${localStorage.getItem("token")}`,
         },
     });
-    if (!response_http.ok) {
+    const response = await response_http.json();
+    if (!response.ok) {
         throw new Error("Error at get workspaces");
     }
-    const response = await response_http.json();
     return response;
 }
