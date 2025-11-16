@@ -1,0 +1,21 @@
+.channel-list {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 12px;
+    margin-top: 12px;
+}
+
+.channel-list-item {
+    text-decoration: none;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 24px;
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.channel-list-item:hover {
+    background: var(--highlight);
+}

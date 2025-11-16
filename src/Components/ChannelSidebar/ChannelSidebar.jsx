@@ -3,6 +3,7 @@ import ChannelList from "../ChannelList/ChannelList";
 import useFetch from "../../hook/useFetch";
 import { useParams } from "react-router";
 import { getChannelList } from "../../services/channelService";
+import "./ChannelSidebar.css";
 
 const ChannelSidebar = () => {
     const { response, loading, error, sendRequest } = useFetch();
@@ -14,11 +15,18 @@ const ChannelSidebar = () => {
         loadChannelList();
     }, [workspace_id]);
     return (
-        <aside>
-            <h2>Channels</h2>
-            {loading && <span>Loading channels...</span>}
-            {response && <ChannelList channel_list={response.data.channels} />}
-            {error && <span>{error}</span>}
+        <aside className="channel-sidebar">
+            <h2 className="channel-sidebar-title">Channels</h2>
+            {loading && (
+                <span className="loading-channels">Loading channels...</span>
+            )}
+            {error && <span className="error-channels">{error}</span>}
+            {response && (
+                <ChannelList
+                    channel_list={response.data.channels}
+                    className="channel-list"
+                />
+            )}
         </aside>
     );
 };

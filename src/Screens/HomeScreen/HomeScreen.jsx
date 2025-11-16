@@ -3,17 +3,21 @@ import useFetch from "../../hook/useFetch";
 import { getWorkspaces } from "../../services/workspaceService";
 import { Link } from "react-router";
 import "./HomeScreen.css";
+import NavBar from "../../Components/NavBar/NavBar";
 
 const HomeScreen = () => {
     const { response, loading, error, sendRequest } = useFetch();
     useEffect(() => {
         sendRequest(() => getWorkspaces());
     }, []);
-    console.log(response, loading, error);
 
     return (
         <div className="HomeScreen">
-            <h1 className="home-title">Workspaces</h1>
+            <NavBar className="nav-bar" />
+            <div className="home-title-container">
+                <h1 className="home-title">Workspaces</h1>
+                <i className="bi bi-plus-square-fill"></i>
+            </div>
             {loading ? (
                 <span className="loading">Loading workspaces...</span>
             ) : (
@@ -21,7 +25,7 @@ const HomeScreen = () => {
                     {response &&
                         response.data.workspaces.map((workspace) => {
                             return (
-                                <div key={workspace.id} className="workspace">
+                                <div key={workspace._id} className="workspace">
                                     <h2 className="workspace-name">
                                         {workspace.name}
                                     </h2>

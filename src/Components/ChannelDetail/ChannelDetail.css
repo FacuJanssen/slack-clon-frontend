@@ -1,0 +1,84 @@
+.channel-detail {
+    width: 75%;
+    height: 100%;
+    background: var(--bg);
+}
+
+.no-channel {
+    font-size: 32px;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.messages-container {
+    margin: 10px;
+    overflow-y: scroll;
+    height: 80vh;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.message-user {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-inline: 0px;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.message {
+    font-size: 20px;
+    color: var(--text);
+    margin-inline: 0px;
+    display: flex;
+}
+
+.message-time {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-inline: 0px;
+    display: flex;
+}
+
+.loading-messages {
+    font-size: 32px;
+    color: var(--warning);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.error-messages {
+    font-size: 32px;
+    color: var(--danger);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.no-messages {
+    font-size: 32px;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
