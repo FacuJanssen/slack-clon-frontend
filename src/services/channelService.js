@@ -17,7 +17,7 @@ export async function getChannelList(workspace_id) {
     return response;
 }
 
-async function createChannel(workspace_id, channel_name) {
+export async function createChannel(workspace_id, channel_name) {
     const response_http = await fetch(
         ENVIRONMENT.URL_API + `/api/workspaces/${workspace_id}/channels`,
         {
@@ -26,7 +26,9 @@ async function createChannel(workspace_id, channel_name) {
                 authorization: `Bearer ${localStorage.getItem("token")}`,
                 "Content-Type": "application/json",
             },
-            body: channel_name,
+            body: JSON.stringify({
+                name: channel_name,
+            }),
         }
     );
     const response = await response_http.json();
