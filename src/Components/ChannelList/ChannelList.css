@@ -39,21 +39,37 @@
     overflow-y: scroll;
 }
 
-.channel-list-item {
+.channel-list-link {
     text-decoration: none;
     cursor: pointer;
     font-size: 24px;
     background: var(--bg);
+    color: var(--text-muted);
     border-radius: 8px;
     padding: 5px;
     margin: 5px;
+    margin-bottom: 0px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.channel-list-item-link {
-    text-decoration: none;
-    color: var(--text);
+.channel-actions {
+    color: var(--bg);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    background-color: var(--text-muted);
+    padding: 5px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-inline: 10px;
 }
 
-.channel-list-item:hover {
+.channel-list-link:hover {
     background: var(--highlight);
+    color: var(--text);
 }

@@ -25,6 +25,7 @@ const ChannelSidebar = () => {
                 <ChannelList
                     channel_list={response.data.channels}
                     className="channel-list"
+                    onChannelUpdate={loadChannelList}
                 />
             )}
         </aside>
