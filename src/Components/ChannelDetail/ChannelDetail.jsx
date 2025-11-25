@@ -82,7 +82,7 @@ const ChannelDetail = () => {
                 className="message-input-container"
                 onSubmit={handleSendMessage}
             >
-                <div className="input-wrapper">
+                <div className="input-container">
                     <input
                         type="text"
                         placeholder="Type a message..."
@@ -103,62 +103,7 @@ const ChannelDetail = () => {
                 </div>
             </form>
         </div>
-    ); /* (
-        <div className="channel-detail">
-            {loading && (
-                <span className="loading-messages">Loading messages...</span>
-            )}
-            {error && <span className="error-messages">{error}</span>}
-            {response && (
-                <div className="messages-container">
-                    {!channel_id ? (
-                        <span className="no-channel-selected">
-                            Select a channel to see messages
-                        </span>
-                    ) : response.data.messages.messages.length === 0 ? (
-                        <span className="no-messages">No messages</span>
-                    ) : (
-                        response.data.messages.messages.map((message) => (
-                            <div
-                                key={message._id}
-                                className="message-container"
-                            >
-                                <span className="message-user">
-                                    {message.user_email}
-                                </span>
-                                <div className="message-content">
-                                    <span className="message">
-                                        {message.message_content}
-                                    </span>
-                                    <span className="message-time">
-                                        {message.created_at_time}
-                                    </span>
-                                </div>
-                            </div>
-                        ))
-                    )}
-                </div>
-            )}
-            <form
-                className="message-input-container"
-                onSubmit={handleSendMessage}
-            >
-                <label htmlFor="message-input">Enter message</label>
-                <input
-                    type="text"
-                    placeholder="Enter message"
-                    className="message-input"
-                    name="message-input"
-                    id="message-input"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                />
-                <button type="submit" className="send-button">
-                    Send
-                </button>
-            </form>
-        </div>
-    ); */
+    );
 };
 
 export default ChannelDetail;

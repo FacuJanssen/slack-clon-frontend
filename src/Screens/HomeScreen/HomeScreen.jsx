@@ -43,7 +43,6 @@ const HomeScreen = () => {
             sendRequest(() => getWorkspaces());
         });
     };
-    console.log(response, loading, error);
     return (
         <div className="HomeScreen">
             <NavBar className="nav-bar" />
