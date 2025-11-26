@@ -59,7 +59,7 @@ export async function deleteChannel(workspace_id, channel_id) {
 export async function editChannel(workspace_id, channel_id, new_name) {
     const response_http = await fetch(
         ENVIRONMENT.URL_API +
-            `/api/workspaces/${workspace_id}/channels/${channel_id}/update  `,
+            `/api/workspaces/${workspace_id}/channels/${channel_id}/update`,
         {
             method: "PUT",
             headers: {
