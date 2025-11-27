@@ -2,6 +2,9 @@
     width: 75%;
     height: 100%;
     background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .no-channel {
@@ -11,6 +14,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     height: 100%;
 }
 
@@ -35,7 +39,7 @@
 .message-content {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
@@ -44,13 +48,13 @@
     color: var(--text);
     margin-inline: 0px;
     display: flex;
+    word-break: break-word;
 }
 
 .message-time {
     font-size: 16px;
     color: var(--text-muted);
     margin-inline: 0px;
-    display: flex;
 }
 
 .loading-messages {
@@ -119,4 +123,175 @@
     background-color: var(--text-muted);
     cursor: pointer;
     border: 1px solid var(--bg-dark);
+}
+
+@media (max-width: 768px) {
+    .channel-detail {
+        width: 70%;
+    }
+
+    .no-channel {
+        font-size: 20px;
+    }
+
+    .messages-container {
+        margin: 8px;
+    }
+
+    .message-container {
+        margin: 8px;
+    }
+
+    .message-user {
+        font-size: 14px;
+    }
+
+    .message {
+        font-size: 18px;
+    }
+
+    .message-time {
+        font-size: 14px;
+    }
+
+    .loading-messages {
+        font-size: 28px;
+    }
+
+    .error-messages {
+        font-size: 28px;
+    }
+
+    .no-messages {
+        font-size: 28px;
+    }
+
+    .message-input-container {
+        padding: 8px;
+    }
+
+    .message-input {
+        padding: 8px;
+        margin: 4px;
+    }
+
+    .send-button {
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .channel-detail {
+        width: 100%;
+    }
+
+    .no-channel {
+        font-size: 18px;
+    }
+
+    .messages-container {
+        margin: 6px;
+    }
+
+    .message-container {
+        margin: 6px;
+    }
+
+    .message-user {
+        font-size: 12px;
+    }
+
+    .message-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+    .message-time {
+        font-size: 12px;
+        margin-top: 4px;
+    }
+
+    .loading-messages {
+        font-size: 24px;
+    }
+
+    .error-messages {
+        font-size: 24px;
+    }
+
+    .no-messages {
+        font-size: 24px;
+    }
+
+    .message-input-container {
+        padding: 6px;
+    }
+
+    .message-input {
+        padding: 6px;
+        margin: 3px;
+    }
+
+    .send-button {
+        padding: 6px;
+        margin: 3px;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 320px) {
+    .no-channel {
+        font-size: 14px;
+    }
+
+    .messages-container {
+        margin: 4px;
+    }
+
+    .message-container {
+        margin: 4px;
+    }
+
+    .message-user {
+        font-size: 10px;
+    }
+
+    .message {
+        font-size: 14px;
+    }
+
+    .message-time {
+        font-size: 10px;
+    }
+
+    .loading-messages {
+        font-size: 20px;
+    }
+
+    .error-messages {
+        font-size: 20px;
+    }
+
+    .no-messages {
+        font-size: 20px;
+    }
+
+    .message-input-container {
+        padding: 4px;
+    }
+
+    .message-input {
+        padding: 4px;
+        margin: 2px;
+    }
+
+    .send-button {
+        padding: 4px;
+        margin: 2px;
+    }
 }

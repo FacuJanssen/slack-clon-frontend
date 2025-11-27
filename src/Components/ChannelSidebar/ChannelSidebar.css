@@ -38,3 +38,59 @@
     text-align: center;
     height: 90%;
 }
+
+@media (max-width: 768px) {
+    .channel-sidebar {
+        width: 30%;
+    }
+
+    .channel-sidebar-title {
+        font-size: 20px;
+        padding: 2px;
+    }
+
+    .loading-channels {
+        font-size: 28px;
+    }
+
+    .error-channels {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .channel-sidebar {
+        border-right: none;
+        position: relative;
+    }
+
+    .channel-sidebar-title {
+        font-size: 18px;
+        padding: 2px;
+    }
+
+    .loading-channels {
+        font-size: 24px;
+        height: 80%;
+    }
+
+    .error-channels {
+        font-size: 24px;
+        height: 80%;
+    }
+}
+
+@media (max-width: 320px) {
+    .channel-sidebar-title {
+        font-size: 16px;
+        padding: 1px;
+    }
+
+    .loading-channels {
+        font-size: 20px;
+    }
+
+    .error-channels {
+        font-size: 20px;
+    }
+}

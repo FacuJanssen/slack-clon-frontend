@@ -43,6 +43,7 @@ const HomeScreen = () => {
             sendRequest(() => getWorkspaces());
         });
     };
+    console.log(response, loading, error);
     return (
         <div className="HomeScreen">
             <NavBar className="nav-bar" />
@@ -66,17 +67,20 @@ const HomeScreen = () => {
                     ) : (
                         response.data.workspaces.map((workspace) => {
                             return (
-                                <div key={workspace._id} className="workspace">
+                                <div
+                                    key={workspace.workspace_id}
+                                    className="workspace"
+                                >
                                     <div className="workspace-header">
                                         <h2 className="workspace-name">
-                                            {workspace.name}
+                                            {workspace.workspace_name}
                                         </h2>
                                         <div className="workspace-actions">
                                             <button
                                                 onClick={() =>
                                                     handleEditWorkspace(
-                                                        workspace._id,
-                                                        workspace.name
+                                                        workspace.workspace_id,
+                                                        workspace.workspace_name
                                                     )
                                                 }
                                                 className="edit-workspace-button"
@@ -87,7 +91,7 @@ const HomeScreen = () => {
                                                 className="delete-workspace-button"
                                                 onClick={() =>
                                                     handleDeleteWorkspace(
-                                                        workspace._id
+                                                        workspace.workspace_id
                                                     )
                                                 }
                                             >
@@ -96,7 +100,10 @@ const HomeScreen = () => {
                                         </div>
                                     </div>
                                     <Link
-                                        to={"/workspace/" + workspace._id}
+                                        to={
+                                            "/workspace/" +
+                                            workspace.workspace_id
+                                        }
                                         className="workspace-link"
                                     >
                                         Open Workspace

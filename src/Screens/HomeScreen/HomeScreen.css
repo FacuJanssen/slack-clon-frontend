@@ -96,6 +96,7 @@
 .workspaces-container {
     overflow-x: scroll;
     height: 100%;
+    gap: 15px;
 }
 
 .no-workspaces {
@@ -127,4 +128,147 @@
     color: var(--text);
     border: none;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 36px;
+    }
+
+    .create-workspace-icon {
+        font-size: 36px;
+        padding: 8px;
+    }
+
+    .create-workspace-button {
+        font-size: 36px;
+    }
+
+    .loading {
+        font-size: 24px;
+    }
+
+    .workspace {
+        padding: 8px;
+        margin: 10px;
+    }
+
+    .workspace-link {
+        padding: 8px;
+        margin: 4px;
+    }
+
+    .no-workspaces {
+        font-size: 24px;
+    }
+
+    .workspace-actions {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-title-container {
+        flex-direction: row;
+        text-align: center;
+        padding: 8px;
+    }
+
+    .home-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .create-workspace-icon {
+        font-size: 28px;
+        padding: 6px;
+    }
+
+    .create-workspace-button {
+        font-size: 28px;
+    }
+
+    .loading {
+        font-size: 20px;
+    }
+
+    .workspace {
+        padding: 6px;
+        margin: 8px;
+    }
+
+    .workspace-header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .workspace-name {
+        margin: 4px 0;
+    }
+
+    .workspace-link {
+        padding: 6px;
+        margin: 4px 0;
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .workspaces-container {
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+        gap: 10px;
+    }
+
+    .no-workspaces {
+        font-size: 20px;
+    }
+
+    .workspace-actions {
+        flex-direction: row;
+        gap: 5px;
+        align-self: center;
+    }
+}
+
+@media (max-width: 320px) {
+    .home-title {
+        font-size: 24px;
+    }
+
+    .create-workspace-icon {
+        font-size: 24px;
+        padding: 4px;
+    }
+
+    .create-workspace-button {
+        font-size: 24px;
+    }
+
+    .loading {
+        font-size: 18px;
+    }
+
+    .workspace {
+        padding: 4px;
+        margin: 6px;
+    }
+
+    .workspace-link {
+        padding: 4px;
+        margin: 2px 0;
+        font-size: 14px;
+    }
+
+    .workspaces-container {
+        gap: 8px;
+    }
+
+    .no-workspaces {
+        font-size: 18px;
+    }
+
+    .workspace-actions {
+        gap: 4px;
+    }
 }
